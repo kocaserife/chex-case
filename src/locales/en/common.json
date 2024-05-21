@@ -1,0 +1,26 @@
+{
+    "landing" : {
+        "title" : "Spelling Bee",
+        "desc" : "How many words can you make with 7 letters?",
+        "play" : "play",
+        "howTo" : "how to play"
+    },
+    "instructions" : {
+        "title" : "How to player Spelling Bee game?",
+        "step1_label" : "Make the first word",
+        "step1_desc" : "To start the game you need to find the first word using 7 letters from the hive. According to the rules of the game, each word found must be at least 4 letters and contain a central letter. Remember that you can use the same letter more than once.",
+        "step2_label" : "Create a word list",
+        "step2_desc" : "Each found word counts towards your total score and adds 15 seconds to your remaining time. Four letter words add 4 point. Longer words earn 1 point per letter. The goal of the game is to collect as many points as possible before time runs out.",
+        "step3_label" : "Find out your score",
+        "step3_desc" : "Track your progress and try to get the maximum score."
+    },
+    "game" : {
+        "score" : "Score",
+        "time" : "Time",
+        "backspace" : "Backspace",
+        "clear" : "Clear",
+        "enter" : "Enter",
+        "game_result" : "Time is up! Your final score is {{score}}.",
+        "play_again" : "Tekrar Oyna"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "landing" : {
+        "title" : "Heceleme Yarışması",
+        "desc" : "7 harfle kaç kelime bulabilirsin?",
+        "play" : "Oyna",
+        "howTo" : "Nasıl Oynanır?"
+    },
+    "instructions" : {
+        "title" : "Heceleme Yarışması nasıl oynanır?",
+        "step1_label": "İlk kelimeyi oluştur",
+        "step1_desc" : "Oyuna başlamak için kovandan çıkan 7 harfi kullanarak ilk kelimeyi bulmanız gerekmektedir. Oyunun kurallarına göre bulunan her kelimenin en az 4 harften oluşması ve bir merkezi harf içermesi gerekmektedir. Unutmayın aynı harfi birden fazla kullanmak.",
+        "step2_label": "Kelime listesi oluştur",
+        "step2_desc" : "Bulunan her kelime toplam puanınıza sayılır ve kalan sürenize 15 saniye ekler. Dört harfli kelimeler 4 puan ekler. Daha uzun kelimeler harf başına 1 puan kazandırır. Oyunun amacı mümkün olduğu kadar çok puan toplamaktır. süre dolmadan önce.",
+        "step3_label": "Puanınızı öğrenin",
+        "step3_desc": "İlerlemenizi takip edin ve maksimum puanı almaya çalışın."
+    },
+    "game" : {
+        "score" : "Skor",
+        "time" : "Süre",
+        "backspace" : "Sil",
+        "clear" : "Temizle",
+        "enter" : "Onayla",
+        "game_result" : "Süre bitti! {{score}} skor ile tamamladınız.",
+        "play_again" : "Tekrar Oyna"
+    }
+}

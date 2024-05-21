@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hexGrid {
+    display: grid;
+    grid-gap:6px;
+    grid-template-columns: repeat(6,2fr);
+    padding-bottom: 60px;
+    width: 280px;
+    margin: 0 auto;
+    font-size:.9em;
+    list-style-type: none;
+    overflow:hidden;
+  }
+  
+  
+  .hex {
+    grid-column-end: span 2;
+    position: relative;
+    visibility:hidden;
+    background-color:solid yellow;
+    outline:1px solid transparent; 
+  }
+
+  .hex:nth-child(5n+1){ /* first hexagon of odd rows */
+    grid-column-start: 2;
+  }
+  .hex:nth-child(5n+3){ /* first hexagon of even rows */
+      grid-column-start: 1;
+  }
+ 
+  .hex::after{
+    content:'';
+    display:block;
+    padding-bottom: 86.602%; 
+  }
+
+  .hexIn{
+    position: absolute;
+    width:100%;
+    padding-bottom: 115.470%;
+    overflow: hidden;
+    visibility: hidden;
+    outline:1px solid transparent; 
+    transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+  }
+
+  .hexIn * {
+    position: absolute;
+    visibility: visible;
+    outline:1px solid transparent; 
+  }
+
+  .hexLink {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #e4eaf3;
+    overflow: hidden;
+    transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+  }
+
+  .hexGrid-plug .hexLink {
+      background-color: #ecf1f9;
+  }
+
+  .center-letter{
+    background-color:#F7DA21;
+  }
+
+  .hexGrid-plug .center-letter.hexLink {
+      background-color: #d1dae8;
+  }
+
+  .hexGrid-plug .hexLink p {
+      display: none;
+  }
+
+  .hex p {
+    width: 100%;
+    padding: 40%;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    user-select: none;
+}
+
+  .hex:active {
+    transform: scale(.86);
+    transition: .2s;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.drop {
+  animation: drop 0.5s ease forwards;
+}
+
+.magnify {
+  display: inline-block;
+  animation: magnify 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes drop {
+  0% {
+    transform-origin: center;
+    opacity: 1;
+  }
+  20% {
+    transform: 
+      translate3d(0, 20px, 0)
+      rotate3d(0, 0, 1, -10deg);
+    opacity: 1;
+  }
+  40%, 45% {
+    transform: 
+      translate3d(0, -20px, 0)
+      rotate3d(0, 0, 1, 10deg);
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: 
+      translate3d(0, 200px, 0)
+      rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+@keyframes magnify {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
